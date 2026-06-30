@@ -28,8 +28,11 @@ async function photo(srcName, outRel, w, h) {
 }
 
 async function fromLogo(size, outAbs, format) {
-  const svg = await fs.readFile(path.join(IMG, "logo.svg"));
-  let pipe = sharp(svg, { density: 512 }).resize(size, size, { fit: "cover" });
+  // Source logo: the client's beehive PNG in /google-maps-images/logo.png.
+  const src = path.join(SRC, "logo.png");
+  let pipe = sharp(src)
+    .flatten({ background: "#ffffff" }) // collapse any transparency onto white
+    .resize(size, size, { fit: "cover" });
   pipe = format === "png" ? pipe.png() : pipe.webp({ quality: 92 });
   await ensureDir(path.dirname(outAbs));
   await pipe.toFile(outAbs);
