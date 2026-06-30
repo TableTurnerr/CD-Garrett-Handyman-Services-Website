@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import QRHover from "../shared/QRHover";
 import FooterLogo from "./FooterLogo";
 import { BUSINESS } from "@/data/business";
@@ -43,24 +43,24 @@ export default function Footer() {
             <FooterLogo version={pkg.version} />
             <div className="flex h-[120px] justify-evenly gap-[10px] flex-col my-auto max-w-100">
               <a
+                href={BUSINESS.socials.googleBusinessProfile}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View CD Garrett Handyman on Google Maps"
+                className="min-w-[100px] p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-colors duration-300 bg-white/5 hover:bg-[var(--color-primary)]/85"
+              >
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fillRule="evenodd" clipRule="evenodd" fill="#ffffff" d="M12 22.5s7-7.16 7-12.5C19 5.86 15.87 3 12 3S5 5.86 5 10c0 5.34 7 12.5 7 12.5zM12 12.6a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z" />
+                </svg>
+              </a>
+              <a
                 href={BUSINESS.socials.googleReview}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="CD Garrett Handyman on Google"
-                className="min-w-[120px] p-2 py-3 h-full w-full items-center justify-center flex gap-2 rounded-lg group transition-colors duration-300 bg-white/5 hover:bg-[var(--color-primary)]/90"
+                aria-label="Read CD Garrett Handyman reviews on Google"
+                className="min-w-[100px] p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-colors duration-300 bg-white/5 hover:bg-[var(--color-primary)]/85"
               >
-                <Star size={18} className="text-[var(--color-gold)]" fill="currentColor" aria-hidden="true" />
-                <span className="text-xs font-medium text-white/85 group-hover:text-white">Google Reviews</span>
-              </a>
-              <a
-                href={BUSINESS.socials.googlePhotos}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="CD Garrett Handyman project photos"
-                className="min-w-[120px] p-2 py-3 h-full w-full items-center justify-center flex gap-2 rounded-lg group transition-colors duration-300 bg-white/5 hover:bg-[var(--color-primary)]/90"
-              >
-                <MapPin size={18} className="text-[var(--color-gold)]" aria-hidden="true" />
-                <span className="text-xs font-medium text-white/85 group-hover:text-white">View Our Work</span>
+                <Star size={22} className="text-white" fill="currentColor" aria-hidden="true" />
               </a>
             </div>
           </div>
