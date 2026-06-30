@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CD Garrett Handyman Services beehive logo">
+  <defs>
+    <linearGradient id="honey" x1="256" y1="96" x2="256" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8C236"/>
+      <stop offset="0.5" stop-color="#F2B01E"/>
+      <stop offset="1" stop-color="#C77F1A"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.42" r="0.75">
+      <stop offset="0" stop-color="#2A2620"/>
+      <stop offset="1" stop-color="#1C1A17"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <!-- top knob -->
+  <circle cx="256" cy="120" r="15" fill="url(#honey)"/>
+
+  <!-- skep coil bands (beehive), top to bottom -->
+  <rect x="214" y="138" width="84" height="40" rx="20" fill="url(#honey)"/>
+  <rect x="190" y="186" width="132" height="42" rx="21" fill="url(#honey)"/>
+  <rect x="168" y="236" width="176" height="44" rx="22" fill="url(#honey)"/>
+  <rect x="150" y="288" width="212" height="46" rx="23" fill="url(#honey)"/>
+  <rect x="138" y="342" width="236" height="48" rx="20" fill="url(#honey)"/>
+
+  <!-- hive base / landing board -->
+  <rect x="122" y="392" width="268" height="22" rx="11" fill="#9C6314"/>
+
+  <!-- entrance hole -->
+  <path d="M236 392 v-14 a20 20 0 0 1 40 0 v14 z" fill="#1C1A17"/>
+
+  <!-- little bee, top right -->
+  <g transform="translate(372 168) rotate(-18)">
+    <ellipse cx="0" cy="0" rx="22" ry="14" fill="#1C1A17"/>
+    <path d="M-7 -13 a13 13 0 0 1 0 26 z" fill="#F2B01E"/>
+    <path d="M7 -12 a12 12 0 0 1 0 24 z" fill="#F2B01E"/>
+    <ellipse cx="-10" cy="-15" rx="13" ry="8" fill="#FFFFFF" fill-opacity="0.85" transform="rotate(-28 -10 -15)"/>
+    <ellipse cx="10" cy="-15" rx="13" ry="8" fill="#FFFFFF" fill-opacity="0.85" transform="rotate(28 10 -15)"/>
+  </g>
+</svg>
